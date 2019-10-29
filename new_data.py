@@ -76,7 +76,9 @@ len(np.where(df_ama.sentiment=='0')[0])
 
 def to_lower(df):
     all_positive = list(df.sentence[np.where(df.sentiment=='1')[0]])
+    print(len(all_positive))
     all_negative = list(df.sentence[np.where(df.sentiment=='0')[0]])
+    print(len(all_negative))
     for i in range(len(all_positive)):
         all_positive[i] = all_positive[i].lower()
     for i in range(len(all_negative)):
